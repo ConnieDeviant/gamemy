@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>game</title>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+
+
+<script type="text/javascript">
+	
+
+$(document).ready(function() {
+	var words=['cat', 'dog', 'word', 'home'];
+	var n = 0;
+
+	$("#start").click(function(){
+while (n<82){
+	var letters=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'g', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+	var rand = Math.floor(Math.random() * letters.length);
+	
+// alert(letters[rand]);
+let  btn = (letters[rand]);
+
+	// var btn = <button>{btn1}</button>;
+
+
+
+	//alert($("#buttons").val());
+	
+	$("#buttons1").append(btn);
+	n++;
+};
+});
+
+$(".ltr").click(function(){
+
+
+	$("#read").val($("#read").val()+$(this).text());
+	for(let i=0;i<words.length;i++){
+		if($("#read").val()==words[i])
+		{
+			alert($("#read").val());
+			break;
+		}
+	}
+	});
+
+
+$("#del").click(function(){
+	$("#read").val(none);
+});
+
+
+$("#done").click(function(){
+	$("#vivod").val($("#vivod").val()+"\n"+$("#read").val());
+	$("#read").val(none);
+});
+
+
+});
+</script>
+
+
+</head>
+<body>
+
+
+<button id="del">Delete</button>
+<input readonly type="text" id="read">
+<button id="done">Done</button>
+
+<button id="start">Start</button>
+
+<div id="buttons1">
+
+	<!-- <div class="container">
+		<div class="row">
+		  <div class="col-sm">
+			<button>1</button>
+		  </div>
+		  <div class="col-sm">
+			<button>1</button>
+		  </div>
+		  <div class="col-sm">
+			<button>1</button>
+		  </div>
+		</div>
+	  </div> -->
+</div>
+
+
+
+	<!-- <button class="ltr">e</button>	
+	<button class="ltr">c</button>
+	<button class="ltr">t</button>
+	<button class="ltr">o</button>
+	<button class="ltr">r</button>
+	<button class="ltr">o</button>
+	<button class="ltr">g</button>	
+	<button class="ltr">o</button>
+	<button class="ltr">d</button>
+	<button class="ltr">w</button>
+	<button class="ltr">h</button>
+	<button class="ltr">d</button>
+	<button class="ltr">m</button>
+	<button class="ltr">a</button> -->
+	
+
+
+<textarea id="vivod">
+	
+</textarea>
+
+
+</body>
+</html>
