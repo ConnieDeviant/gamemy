@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>game</title>
-
+	<link rel="stylesheet" href="./stl.css" />
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -28,39 +28,38 @@
 	
 
 $(document).ready(function() {
-	var words=['cat', 'dog', 'word', 'home'];
+	
 	var n = 0;
+	
 
 	$("#start").click(function(){
 while (n<82){
 	var letters=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'g', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-	var rand = Math.floor(Math.random() * letters.length);
 	
-// alert(letters[rand]);
-let  btn = (letters[rand]);
-
-	// var btn = <button>{btn1}</button>;
-
-
-
-	//alert($("#buttons").val());
+var rand = Math.floor(Math.random() * letters.length);
 	
-	$("#buttons1").append(btn);
+
+var btn = (letters[rand]);
+
+$(".btn").text(btn);
+
+	
+	
+
 	n++;
 };
 });
 
-$(".ltr").click(function(){
+$(".btn").click(function(){
 
 
 	$("#read").val($("#read").val()+$(this).text());
 	for(let i=0;i<words.length;i++){
-		if($("#read").val()==words[i])
-		{
+		if($("#read").val()==words[i]){
 			alert($("#read").val());
 			break;
-		}
-	}
+		};
+	};
 	});
 
 
@@ -80,7 +79,7 @@ $("#done").click(function(){
 
 
 </head>
-<body>
+<body class="main">
 
 
 <button id="del">Delete</button>
@@ -88,26 +87,100 @@ $("#done").click(function(){
 <button id="done">Done</button>
 
 <button id="start">Start</button>
+<br>
+<div id="buttons1" class="btn-group btn-group-mn">
 
-<div id="buttons1">
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
 
-	<!-- <div class="container">
-		<div class="row">
-		  <div class="col-sm">
-			<button>1</button>
-		  </div>
-		  <div class="col-sm">
-			<button>1</button>
-		  </div>
-		  <div class="col-sm">
-			<button>1</button>
-		  </div>
-		</div>
-	  </div> -->
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+<button class="btn"></button>
+
 </div>
-
-
-
 	<!-- <button class="ltr">e</button>	
 	<button class="ltr">c</button>
 	<button class="ltr">t</button>
@@ -121,10 +194,10 @@ $("#done").click(function(){
 	<button class="ltr">h</button>
 	<button class="ltr">d</button>
 	<button class="ltr">m</button>
-	<button class="ltr">a</button> -->
-	
+	<button class="ltr">a</button>
+	 -->
 
-
+<br>
 <textarea id="vivod">
 	
 </textarea>
